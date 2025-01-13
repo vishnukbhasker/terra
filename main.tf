@@ -6,7 +6,8 @@ provider "aws" {
 
 resource "aws_instance" "example" {
   ami           = "ami-075449515af5df0d1" 
-  instance_type = "t3.micro"             
+  instance_type = "t3.micro"  
+  key_name      = "mykey"
 
   tags = {
     Name = "Jenkins Server"
