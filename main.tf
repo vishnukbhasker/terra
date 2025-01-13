@@ -1,15 +1,15 @@
 
 provider "aws" {
-  region = "eu-north-1" # Replace with your preferred AWS region
+  region = "eu-north-1" 
    
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-075449515af5df0d1" # Amazon Linux 2 AMI (Free-tier eligible)
-  instance_type = "t3.micro"             # Free-tier instance type
+  ami           = "ami-075449515af5df0d1" 
+  instance_type = "t3.micro"             
 
   tags = {
-    Name = "Simple-EC2-Instance"
+    Name = "Jenkins Server"
   }
 }
 
