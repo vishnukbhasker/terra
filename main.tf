@@ -1,6 +1,7 @@
 
 provider "aws" {
   region = "eu-north-1" # Replace with your preferred AWS region
+  access_key 
 }
 
 resource "aws_instance" "example" {
