@@ -1,9 +1,17 @@
+
 provider "aws" {
-  region = "eu-north-1"
+  region = "eu-north-1" # Replace with your preferred AWS region
 }
 
-resource "ec2_instance" "example" {
-  ami_value = "ami-075449515af5df0d1" # replace this
-  instance_type_value = "t3.micro"
-  subnet_id_value = "subnet-0df037d5b98ca8043". # replace this
+resource "aws_instance" "example" {
+  ami           = "ami-075449515af5df0d1" # Amazon Linux 2 AMI (Free-tier eligible)
+  instance_type = "t3.micro"             # Free-tier instance type
+
+  tags = {
+    Name = "Simple-EC2-Instance"
+  }
+}
+
+output "instance_public_ip" {
+  value = aws_instance.example.public_ip
 }
