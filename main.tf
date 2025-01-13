@@ -10,7 +10,7 @@ resource "aws_instance" "example" {
   key_name      = "mykey"
 
   tags = {
-    Name = "Jenkins Server"
+    Name = "Jenkins"
   }
 }
 
